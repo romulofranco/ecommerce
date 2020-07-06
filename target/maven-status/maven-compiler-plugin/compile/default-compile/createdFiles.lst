@@ -1,0 +1,6 @@
+com\uni7\ecommerce\exception\InvalidProductException.class
+com\uni7\ecommerce\product\ProductService.class
+com\uni7\ecommerce\product\ProductRepository.class
+com\uni7\ecommerce\product\Product.class
+com\uni7\ecommerce\Autenticacao.class
+com\uni7\ecommerce\data\BaseEntity.class
