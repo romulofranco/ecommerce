@@ -1,64 +1,69 @@
 # ecommerce
-A draft of an ecommerce made with springboot for a postgraduate work
+This is a e-Commerce REST API Sample by using Spring Boot API
 
 #### Prerequisites
-- [OpenJDK 11](https://openjdk.java.net/projects/jdk/11/)
-- [Maven 3.6+](https://maven.apache.org/install.html)
+- [OpenJDK 8]
+- [Docker 19.03.12]
+- [Maven 3.6+]
 
 #### Running
 
-- Before running application is required configure Postgres database on port 5432 and create database 'ecommerce'
-- If you prefer run database into [Docker](https://docs.docker.com/install/linux/docker-ee/ubuntu/):
+At prompt level, type commands below:
+
 ```
-docker run --name ecommerce -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=ecommerce postgres:9.6-alpine
-```
-```
-psql -h localhost -U postgres -d postgres
-```
-```
-create database ecommerce
+git clone https://github.com/romulofranco/ecommerce.git
+cd ecommerce
 ```
 
+You can run the application by using maven directly or by using a Docker container
 
-After this you can run the application:
+Maven:
+
 ```
 mvn clean compile spring-boot:run
 ```
 
-#### Endpoints
-##### Customer
+By using docker, first build an image
+
 ```
-[GET] /customers
-[POST] /customers
-[PUT] /customers
-[GET] /customers/{id}
-[DELETE] /customers/{id}
+docker build -t springio/ecommerce . 
 ```
 
-##### Products
+Run an image that you've created 
+
 ```
-[GET] /products
-[POST] /products
-[PUT] /products
-[GET] /products/{id}
-[DELETE] /products/{id}
+docker run -p 8181:9090 springio/ecommerce
 ```
 
-##### Order
+### Get Access to it
+
+In the both case (Maven or Docker), you should get access to app using:
+
 ```
-[POST] /customers/{customerId}/orders
+http://localhost:9090/login
+```
+ 
+The payload credentials are: {"username":"romulo","password":"12345"} or provide this credentials in the default spring boot login page.
+
+
+### Demo
+
+A demo can be accessed in:
+
+```
+Heroku: https://romulo-ecommerce.herokuapp.com/
 ```
 
-##### StockItems
+Or in my Contabo Server:
 ```
-[GET] /stockItems
-[POST] /stockItems
-[PUT] /stockItems
-[GET] /stockItems/{id}
-[DELETE] /stockItems/{id}
+http://62.171.171.85:8080/
 ```
 
-##### StockRequest
+#### Endpoints and API Doc
+
+After login, the documentation should be accessible on:
+
 ```
-[POST] /stockRequest
+http://localhost:9090/swagger-ui.html#/
 ```
+
