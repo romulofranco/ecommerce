@@ -35,7 +35,9 @@ In the both case (Maven or Docker), you should get access to app using:
 
     http://localhost:9090/login
  
-The payload credentials are: *{"username":"romulo","password":"12345"}* or provide this credentials in the default spring boot login page.
+The payload credentials can be used on postman and these are: 
+    *{"username":"romulo","password":"12345"}*    
+or provide that in the default spring boot login page.
 
 ### Demo
 
