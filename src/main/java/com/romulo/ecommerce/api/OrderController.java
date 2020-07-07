@@ -11,6 +11,8 @@ import com.romulo.ecommerce.order.OrderService;
 import com.romulo.ecommerce.product.Product;
 import com.romulo.ecommerce.product.ProductService;
 
+import io.swagger.annotations.Api;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +21,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/customers/{customerId}/orders")
+@RequestMapping(path = "/v1/customers/{customerId}/orders")
+@Api(value = "Orders")
 public class OrderController {
 
     private final CustomerService customerService;

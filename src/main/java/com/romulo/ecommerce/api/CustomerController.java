@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import com.romulo.ecommerce.customer.Customer;
 import com.romulo.ecommerce.customer.CustomerService;
 
+import io.swagger.annotations.Api;
+
 @RestController
-@RequestMapping(path = "/customers")
+@RequestMapping(path = "/v1/customers")
+@Api(value = "Customers")
 public class CustomerController {
 
     private final CustomerService customerService;

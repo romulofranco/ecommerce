@@ -7,6 +7,8 @@ import com.romulo.ecommerce.product.ProductService;
 import com.romulo.ecommerce.stock.StockItem;
 import com.romulo.ecommerce.stock.StockService;
 
+import io.swagger.annotations.Api;
+
 import java.util.Optional;
 import java.util.stream.Stream;
 
@@ -14,7 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/stockItems")
+@RequestMapping(path = "/v1/stockItems")
+@Api(value = "Stock")
 public class StockController {
 
     private final StockService stockService;

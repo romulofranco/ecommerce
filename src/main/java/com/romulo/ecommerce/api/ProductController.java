@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import com.romulo.ecommerce.product.Product;
 import com.romulo.ecommerce.product.ProductService;
 
+import io.swagger.annotations.Api;
+
 @RestController
-@RequestMapping(path = "/products")
+@RequestMapping(path = "/v1/products")
+@Api(value = "Products")
 public class ProductController {
 
     private final ProductService productService;
