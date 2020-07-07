@@ -1,4 +1,4 @@
-# ecommerce
+# eCommerce Sample BackEnd
 This is a e-Commerce REST API Sample by using Spring Boot API
 
 #### Prerequisites
