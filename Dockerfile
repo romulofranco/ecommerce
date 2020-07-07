@@ -7,7 +7,7 @@ RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml verify
 
 FROM java:8-jre-alpine
 WORKDIR /app
-EXPOSE 9898
-COPY --from=build /tmp/target/*.jar /app/lojadeproduto.jar
+EXPOSE 9090
+COPY --from=build /tmp/target/*.jar /app/ecommerce.jar
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/lojadeproduto.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/ecommerce.jar"]
