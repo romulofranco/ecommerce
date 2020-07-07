@@ -45,9 +45,9 @@ A demo can be accessed in:
   
     Heroku: https://romulo-ecommerce.herokuapp.com/
 
-Or in my Contabo Server:
+Or in Docker container on my Contabo Server:
 
-    http://62.171.171.85:8080/
+    http://62.171.171.85:8181/
 
 #### Endpoints and API Doc
 
