@@ -3,7 +3,7 @@ This is a e-Commerce REST API Sample by using Spring Boot API
 
 #### Prerequisites
 - [OpenJDK 8]
-- [Docker 19.03.12]
+- [Docker 19.03.12] (Optional)
 - [Maven 3.6+]
 
 #### Running
@@ -35,7 +35,7 @@ Run an image that you've created
 docker run -p 9090:9090 springio/ecommerce
 ```
 
-### Get Access to it
+### Get access to it
 
 In the both case (Maven or Docker), you should get access to app using:
 
@@ -43,7 +43,9 @@ In the both case (Maven or Docker), you should get access to app using:
 http://localhost:9090/login
 ```
  
-The payload credentials are: {"username":"romulo","password":"12345"} or provide this credentials in the default spring boot login page.
+The payload credentials are: 
+    **{"username":"romulo","password":"12345"}** 
+or provide that in the default spring boot login page.
 
 
 ### Demo
