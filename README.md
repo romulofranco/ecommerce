@@ -32,7 +32,7 @@ docker build -t springio/ecommerce .
 Run an image that you've created 
 
 ```
-docker run -p 8181:9090 springio/ecommerce
+docker run -p 9090:9090 springio/ecommerce
 ```
 
 ### Get Access to it
